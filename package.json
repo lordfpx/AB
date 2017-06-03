@@ -10,6 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/lordfpx/AB.git"
   },
+  "keywords": [
+    "javascript",
+    "native",
+    "vanilla",
+    "another-brick",
+    "AB"
+  ],
   "author": "Thierry Philippe (lordfpx)",
   "license": "ISC",
   "bugs": {
