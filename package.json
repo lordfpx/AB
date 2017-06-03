@@ -1,0 +1,19 @@
+{
+  "name": "ab",
+  "version": "1.0.0",
+  "description": "AB base for AB plugins",
+  "main": "AB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordfpx/AB.git"
+  },
+  "author": "Thierry Philippe (lordfpx)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lordfpx/AB/issues"
+  },
+  "homepage": "https://github.com/lordfpx/AB#readme"
+}
