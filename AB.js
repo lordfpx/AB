@@ -16,20 +16,20 @@ window.AB = {
   // extend function
   extend: function() {
     var extended = {},
-        deep = false,
-        i = 0,
-        length = arguments.length;
+        deep     = false,
+        i        = 0,
+        length   = arguments.length;
 
-    if (Object.prototype.toString.call( arguments[0] ) === '[object Boolean]' ){
+    if (Object.prototype.toString.call(arguments[0]) === '[object Boolean]'){
       deep = arguments[0];
       i++;
     }
 
-    var merge = function (obj) {
+    var merge = function(obj) {
       for (var prop in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, prop)) {
           if (deep && Object.prototype.toString.call(obj[prop]) === '[object Object]') {
-            extended[prop] = extend(true, extended[prop], obj[prop]);
+            extended[prop] = window.AB.extend(true, extended[prop], obj[prop]);
           } else {
             extended[prop] = obj[prop];
           }
@@ -37,18 +37,20 @@ window.AB = {
       }
     };
 
-    for ( ; i < length; i++ ) {
-      var obj = arguments[i];
-      merge(obj);
+    for (; i < length; i++) {
+      merge(arguments[i]);
     }
 
     return extended;
   },
 
-  // tot test if a string can be a JSON
+  // to test if a string is a JSON
   isJson: function(str) {
-    try { JSON.parse(str);
-    } catch(e) { return false; }
+    try {
+      JSON.parse(str);
+    } catch(e) {
+      return false;
+    }
     return true;
   },
 
