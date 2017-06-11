@@ -7,5 +7,5 @@ This is the main dependency for all AB plugins.
 You can either :
 
 - **Bad** -  load it before all AB plugins
-- **Better** -  concat it with AB plugins
+- **Better** - concat it before all AB plugins
 - **Best** - Use Browserify or webpack (or others)

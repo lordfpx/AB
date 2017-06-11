@@ -12,8 +12,8 @@
 })();
 
 // main AB object
-window.AB = {
-  // extend function
+window.AB = (typeof AB === 'object') ? AB : {
+  // deep extend function
   extend: function() {
     var extended = {},
         deep     = false,
@@ -44,7 +44,7 @@ window.AB = {
     return extended;
   },
 
-  // to test if a string is a JSON
+  // test if a string is a JSON
   isJson: function(str) {
     try {
       JSON.parse(str);
