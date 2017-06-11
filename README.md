@@ -2,6 +2,8 @@
 
 This is the main dependency for all AB plugins.
 
+It's very tiny: less than **450 bytes** (uglified and GZipped)
+
 [NPM](https://www.npmjs.com/package/another-brick)
 
 ## Usage
