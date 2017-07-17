@@ -2,9 +2,10 @@
   "name": "another-brick",
   "version": "1.0.5",
   "description": "AB, for another-brick is the main dependency for all AB scripts",
-  "main": "AB.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack index.js dist/AB.js"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/lordfpx/AB/issues"
   },
-  "homepage": "https://github.com/lordfpx/AB#readme"
+  "homepage": "https://github.com/lordfpx/AB#readme",
+  "devDependencies": {
+    "webpack": "^3.3.0"
+  }
 }

@@ -12,7 +12,7 @@
 })();
 
 // main AB object
-window.AB = (typeof AB === 'object') ? AB : {
+var AB = {
   // deep extend function
   extend: function() {
     var extended = {},
@@ -29,7 +29,7 @@ window.AB = (typeof AB === 'object') ? AB : {
       for (var prop in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, prop)) {
           if (deep && Object.prototype.toString.call(obj[prop]) === '[object Object]') {
-            extended[prop] = window.AB.extend(true, extended[prop], obj[prop]);
+            extended[prop] = AB.extend(true, extended[prop], obj[prop]);
           } else {
             extended[prop] = obj[prop];
           }
@@ -57,3 +57,5 @@ window.AB = (typeof AB === 'object') ? AB : {
   // where all AB plugins are stored
   plugins: {}
 };
+
+module.exports = AB;
