@@ -11,8 +11,8 @@
   window.CustomEvent = CustomEvent;
 })();
 
-// main AB object
-var AB = {
+// main public AB object
+window.AB = {
   // deep extend function
   extend: function() {
     var extended = {},
@@ -29,7 +29,7 @@ var AB = {
       for (var prop in obj) {
         if (Object.prototype.hasOwnProperty.call(obj, prop)) {
           if (deep && Object.prototype.toString.call(obj[prop]) === '[object Object]') {
-            extended[prop] = AB.extend(true, extended[prop], obj[prop]);
+            extended[prop] = window.AB.extend(true, extended[prop], obj[prop]);
           } else {
             extended[prop] = obj[prop];
           }
@@ -54,8 +54,5 @@ var AB = {
     return true;
   },
 
-  // where all AB plugins are stored
   plugins: {}
 };
-
-module.exports = AB;
