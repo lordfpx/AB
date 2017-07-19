@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack index.js dist/AB.js"
+    "build": "webpack index.js dist/AB.js && webpack index.js dist/AB.min.js --optimize-minimize"
   },
   "repository": {
     "type": "git",
