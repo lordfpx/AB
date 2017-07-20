@@ -1,6 +1,6 @@
 {
   "name": "another-brick",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "AB, for another-brick is the main dependency for all AB scripts",
   "main": "index.js",
   "scripts": {
