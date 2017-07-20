@@ -11,8 +11,8 @@
   window.CustomEvent = CustomEvent;
 })();
 
-// main AB object
-window.AB = (typeof AB === 'object') ? AB : {
+// main public AB object
+window.AB = {
   // deep extend function
   extend: function() {
     var extended = {},
@@ -54,6 +54,5 @@ window.AB = (typeof AB === 'object') ? AB : {
     return true;
   },
 
-  // where all AB plugins are stored
   plugins: {}
 };

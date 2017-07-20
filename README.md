@@ -1,20 +1,18 @@
-# AB
+# AB - another-brick
 
 This is the main dependency for all AB plugins.
 
-It's very tiny: less than **450 bytes** (uglified and GZipped)
+It's very tiny: about **600 bytes** (uglified and GZipped)
 
 [NPM](https://www.npmjs.com/package/another-brick)
 
 ## Usage
 
-You can either :
+Alone, it's nearly useless. It's only a small common base for all AB plugins you can find on my repository.
 
-- **Bad** -  load it before all AB plugins
-- **Better** - concat it before all AB plugins
-- **Best** - Use Browserify or webpack (or others)
+You will need a build tool for that : Browserify, Webpack (or others).
 
-Alone, it proposes:
+Alone, it proposes you:
 - **CustomEvent()** constructor polyfill for IE
 - **AB.extend**: extend (optionnaly deeply) multiple objects:
 
@@ -34,4 +32,3 @@ Alone, it proposes:
   AB.isJson('{"toto": true}');
   // return true
   ```
-- **AB.plugins**: gives you acces to loaded AB plugins (in order to run them again for exemple). It's a copy of normal function call (abInterchange() for exemple).
