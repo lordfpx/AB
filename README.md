@@ -4,7 +4,7 @@
 This repository is quite useless by itself.
 </p>
 <p align="center">
-It's a small collection of methods used by AB components. It's pretty small: about **600 bytes** (uglified and GZipped). Have look at my small, dependencie free and vanilla JavaScript components:
+It's a small collection of methods used by AB components. It's pretty small: about <strong>600 bytes</strong> (uglified and GZipped). Have look at my small, dependencie free and vanilla JavaScript components:
 </p>
 
 - [AB-mediaQuery](https://github.com/lordfpx/AB-mediaQuery)
