@@ -11,6 +11,7 @@ It's a small collection of methods used by AB components. It's pretty small: abo
 - [AB-interchange](https://github.com/lordfpx/AB-interchange)
 - [AB-formValidation](https://github.com/lordfpx/AB-formValidation)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/5e584107506e5d5e84c3/maintainability)](https://codeclimate.com/github/lordfpx/AB/maintainability)
 
 <h2 align="center">Install</h2>
 
