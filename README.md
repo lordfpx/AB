@@ -30,7 +30,7 @@ yarn add another-brick
 Public methods you can used on your pages:
 
 - **CustomEvent()** constructor polyfill for IE ([MDN](https://developer.mozilla.org/en-US/docs/Web/API/CustomEvent/CustomEvent))
-- **AB.extend** extend (deeply if setting 1st argument to true) multiple objects:
+- **AB.extend**: Extend multiple objects (deeply if setting 1st argument to true)
   ```js
   var obj1 = {toto: "bla", test: {data1: "A", data2: "B"}};
   var obj2 = {blabla: "lorem"};
@@ -40,7 +40,7 @@ Public methods you can used on your pages:
 
   // newObject = {blabla: "lorem", test: {data1: "X", data2: "B"}, toto: "bla"}
   ```
-- **AB.isJson** to check if a string can be a JSON:
+- **AB.isJson**: To check if a string can be a JSON
   ```js
   AB.isJson('{"toto": true}');
   // return true
