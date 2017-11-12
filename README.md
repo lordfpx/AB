@@ -1,7 +1,5 @@
 ## AB (another-brick)
 
-[AB on Github](https://github.com/lordfpx/AB)
-
 This repository is quite useless by itself.
 
 It's a small collection of methods used by AB components. It's pretty small: about <strong>600 bytes</strong> (uglified and GZipped). Have look at my small, dependencie free and vanilla JavaScript components:
@@ -23,7 +21,6 @@ Install with yarn:
 ```bash
 yarn add another-brick
 ```
-
 
 ## Usage
 
@@ -48,3 +45,4 @@ Public methods you can used on your pages:
   AB.isJson('{"toto: true');
   // return false
   ```
+
