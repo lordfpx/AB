@@ -80,7 +80,30 @@
   window.CustomEvent = CustomEvent;
 })();
 
-// main public AB object
+// throttle events with requestAnimationFrame
+(function() {
+  var throttle = function(type, name) {
+    var running = false;
+    var func = function() {
+      if (running) return;
+
+      running = true;
+        window.requestAnimationFrame(function() {
+          window.dispatchEvent(new CustomEvent(name));
+          running = false;
+      });
+    };
+    window.addEventListener(type, func);
+  };
+
+  /* init - you can init any event */
+  throttle("resize", "ab-resize");
+  throttle("scroll", "ab-scroll");
+  throttle("mousemove", "ab-mousemove");
+  throttle("touchmove", "ab-touchmove");
+})();
+
+
 window.AB = {
   // deep extend function
   extend: function() {
@@ -123,8 +146,23 @@ window.AB = {
     return true;
   },
 
-  plugins: {}
+  runUpdaters: function(plugin) {
+    if (window.AB.options[plugin]) {
+      window.AB.plugins[plugin](window.AB.options[plugin]);
+    } else {
+      for(var options in AB.options){
+        if(window.AB.options.hasOwnProperty(options))
+          window.AB.plugins[options](window.AB.options[options]);
+      }
+    }
+  },
+
+  plugins: {},
+  options: {}
 };
+
+module.exports = window.AB;
+
 
 /***/ })
 /******/ ]);
