@@ -1,4 +1,4 @@
-## **AB (another-brick)**
+# AB (another-brick)
 
 This repository is quite useless by itself (even if some convenient tools are provided: see below) but scripts using it might interest you:
 
@@ -9,7 +9,7 @@ This repository is quite useless by itself (even if some convenient tools are pr
 [![Maintainability](https://api.codeclimate.com/v1/badges/5e584107506e5d5e84c3/maintainability)](https://codeclimate.com/github/lordfpx/AB/maintainability)
 
 
-## **Usage**
+## Usage
 
 Public methods you can used on your scripts:
 
