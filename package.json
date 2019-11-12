@@ -2,11 +2,16 @@
   "name": "another-brick",
   "version": "1.2.0",
   "description": "AB, for another-brick, is the main dependency for all AB scripts",
-  "main": "index.js",
-  "prepublishOnly": "npm run build",
+  "main": "src/index.js",
+  "prepublishOnly": "yarn build",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack index.js dist/AB.js && webpack index.js dist/AB.min.js --optimize-minimize"
+    "serve": "yarn reset && parcel src/index.js --out-dir dist",
+    "reset": "rimraf dist",
+    "build": "yarn reset && yarn build:dist",
+    "build:dist": "yarn build:js && yarn build:jsmin",
+    "build:js": "parcel build src/index.js --no-source-maps --no-content-hash --out-dir dist --out-file index.js --no-minify",
+    "build:jsmin": "parcel build src/index.js --no-source-maps --no-content-hash --out-dir dist --out-file index.min.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +31,8 @@
   },
   "homepage": "https://github.com/lordfpx/AB#readme",
   "devDependencies": {
-    "webpack": "^3.3.0"
+    "parcel-bundler": "^1.12.4",
+    "rimraf": "^3.0.0",
+    "yarn": "^1.19.1"
   }
 }
