@@ -1,11 +1,10 @@
 {
   "name": "another-brick",
   "version": "1.3.0",
-  "description": "AB, for another-brick is the main dependency for all AB scripts",
-  "main": "index.js",
+  "description": "AB, for another-brick",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack index.js dist/AB.js && webpack index.js dist/AB.min.js --optimize-minimize"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,13 +17,10 @@
     "another-brick",
     "AB"
   ],
-  "author": "Thierry Philippe (lordfpx)",
+  "author": "Thierry Philippe (@lordfpx)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lordfpx/AB/issues"
   },
-  "homepage": "https://github.com/lordfpx/AB#readme",
-  "devDependencies": {
-    "webpack": "^3.3.0"
-  }
+  "homepage": "https://github.com/lordfpx/AB#readme"
 }
