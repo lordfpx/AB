@@ -1,9 +1,8 @@
 {
   "name": "another-brick",
   "version": "1.2.0",
-  "description": "AB, for another-brick, is the main dependency for all AB scripts",
+  "description": "AB, for another-brick",
   "main": "src/index.js",
-  "prepublishOnly": "yarn build",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -23,6 +22,5 @@
   "bugs": {
     "url": "https://github.com/lordfpx/AB/issues"
   },
-  "homepage": "https://github.com/lordfpx/AB#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/lordfpx/AB#readme"
 }
