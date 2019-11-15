@@ -11,6 +11,7 @@
   window.CustomEvent = CustomEvent;
 })();
 
+
 // throttle events with requestAnimationFrame
 (function() {
   var throttle = function(type, name) {
@@ -19,9 +20,9 @@
       if (running) return;
 
       running = true;
-        window.requestAnimationFrame(function() {
-          window.dispatchEvent(new CustomEvent(name));
-          running = false;
+      window.requestAnimationFrame(function() {
+        window.dispatchEvent(new CustomEvent(name));
+        running = false;
       });
     };
     window.addEventListener(type, func);
@@ -38,10 +39,10 @@
 window.AB = {
   // deep extend function
   extend: function() {
-    var extended = {},
-        deep     = false,
-        i        = 0,
-        length   = arguments.length;
+    var extended = {};
+    var deep = false;
+    var i = 0;
+    var length = arguments.length;
 
     if (Object.prototype.toString.call(arguments[0]) === '[object Boolean]'){
       deep = arguments[0];
@@ -82,14 +83,15 @@ window.AB = {
       window.AB.plugins[plugin](window.AB.options[plugin]);
     } else {
       for(var options in AB.options){
-        if(window.AB.options.hasOwnProperty(options))
+        if(window.AB.options.hasOwnProperty(options)) {
           window.AB.plugins[options](window.AB.options[options]);
+        }
       }
     }
   },
 
   plugins: {},
-  options: {}
+  options: {},
 };
 
 module.exports = window.AB;
